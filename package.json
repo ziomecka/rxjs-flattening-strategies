@@ -1,0 +1,45 @@
+{
+  "name": "rxjs-flattening-strategies",
+  "version": "1.0.0",
+  "description": "RxJS flattening strategies. Project prepared for Tech Talk hosted by Codilime (January 2020)",
+  "main": "index.ts",
+  "scripts": {
+    "webpackDevServer": "webpack-dev-server --config ./webpack/index.js",
+    "webpack": "webpack --config ./webpack/index.js",
+    "lint": "eslint ./src/**/*.ts ./\\.*.js ./*.js"
+  },
+  "keywords": [
+    "rxjs"
+  ],
+  "author": "Katarzyna Ziomek-Zdanowicz <ziomecka78@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ziomecka/rxjs-flattening-strategies.git"
+  },
+  "dependencies": {
+    "rxjs": "6.5.3"
+  },
+  "devDependencies": {
+    "@types/node": "12.12.17",
+    "@typescript-eslint/eslint-plugin": "^2.15.0",
+    "@typescript-eslint/parser": "^2.15.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "3.3.2",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "html-webpack-plugin": "3.2.0",
+    "mini-css-extract-plugin": "0.8.0",
+    "node-sass": "4.13.0",
+    "sass-loader": "8.0.0",
+    "ts-loader": "6.2.1",
+    "typescript": "3.7.3",
+    "webpack": "4.41.2",
+    "webpack-cli": "3.3.10",
+    "webpack-dev-server": "3.9.0"
+  }
+}

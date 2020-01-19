@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "target": "es6",
+    "outDir": "./dev",
+    "typeRoots": [
+      "./node_modules/@types/"
+    ],
+    "moduleResolution": "node"
+  },
+  "exclude": [
+    "./*.js",
+    "./*.json",
+    "./*.md",
+    "./node_modules/**/*",
+  ],
+  "include": [
+    "./src/**/*"
+  ]
+}
