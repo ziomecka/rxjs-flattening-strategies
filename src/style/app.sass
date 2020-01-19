@@ -1,0 +1,49 @@
+.box
+  display: flex
+  justify-content: center
+  margin: 0 auto
+  padding-top: $large-distance
+
+.logger-box
+  display: inline-block
+  width: 200px
+  justify-content: center
+  margin: 0 $small-distance
+  > p
+    font-weight: $bold-font-weight
+
+.logger
+  background-color: rgba(0,0,0,.05)
+  padding: $small-distance
+
+$log-width: 10px
+
+.log
+  padding: $small-distance $medium-distance
+  position: relative
+  margin: $small-distance 0
+  &:after
+    display: inline-block
+    position: absolute
+    top: 50%
+    right: $medium-distance
+    transform: translateY(-50%)
+    width: $log-width
+    height: $log-width
+    font-size: $hint-font-size
+    color: $hint-color
+    line-height: $log-width
+    text-align: center
+    padding: $x-small-distance
+    border: $border-width solid $hint-color
+    border-radius: 50%
+    content: attr(data-xhr-counter)
+
+#emit-count
+  width: $large-distance
+  margin: $small-distance
+  font-weight: $bold-font-weight
+  text-align: right
+
+.strategy-title
+  padding: $medium-distance

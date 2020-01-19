@@ -1,0 +1,67 @@
+body, main, sidebar, div, p, fieldset, h1, h2, input
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+fieldset
+  border: none
+  padding: $medium-distance 0
+  border-bottom: $border-width solid $solid-color
+
+body
+  font-family: Arial
+  font-size: $font-size
+  padding: $medium-distance
+  background-color: $background-color
+
+h1
+  font-size: $h1-font-size
+  padding: $medium-distance 0
+  border-bottom: $border-width solid $solid-color
+
+h2
+  display: flex
+  align-items: center
+  font-size: $h2-font-size
+  padding: $medium-distance 0
+  input
+    margin-left: $medium-distance
+  label
+    font-weight: $medium-font-weight
+    font-size: $hint-font-size
+
+input
+  margin: 0 $small-distance 0 $large-distance
+
+fieldset input:nth-of-type(1)
+  margin-left: 0
+
+sidebar, sidebar div
+  display: flex
+
+sidebar
+  flex-direction: column
+  padding-bottom: $large-distance
+
+sidebar div
+  align-items: center
+
+button
+  box-sizing: border-box
+  margin: $small-distance
+  padding: $medium-distance
+  width: $medium-button-width
+  font-family: Arial
+  font-size: $font-size
+  background-color: rgba(0,0,0,0)
+  box-shadow: none
+  outline: none
+  border: $border-width solid $solid-color
+  border-radius: $border-width
+  &:nth-of-type(1)
+    margin-left: 0
+  &:hover
+    background-color: rgba(0,0,0,.3)
+  &:active
+    background-color: rgba(0,0,0,1)
+    color: $background-color
