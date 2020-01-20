@@ -6,7 +6,8 @@
   "scripts": {
     "webpackDevServer": "webpack-dev-server --config ./webpack/index.js",
     "webpack": "webpack --config ./webpack/index.js",
-    "lint": "eslint ./src/**/*.ts ./\\.*.js ./*.js"
+    "lint": "eslint ./src/**/*.ts ./\\.*.js ./*.js",
+    "start": "node server.js"
   },
   "keywords": [
     "rxjs"
@@ -16,6 +17,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ziomecka/rxjs-flattening-strategies.git"
+  },
+  "engines": {
+    "node": "11.15.0"
   },
   "dependencies": {
     "rxjs": "6.5.3"
