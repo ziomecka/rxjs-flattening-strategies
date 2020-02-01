@@ -1,6 +1,9 @@
 import {
+  $answer,
   $checkAllInput,
   $checkAllLabel,
+  $closeAnswer,
+  $question,
   $saveCounter,
   $strategies,
 } from './constants';
@@ -13,6 +16,7 @@ import { saveCounter$ } from './xhr';
 export const init = () => {
   listenStrategiesCheckBoxes();
   listenCheckAll();
+  listenQuestion();
 
   applicationState$.subscribe(reactToAppState);
   saveCounter$.subscribe(count => ($saveCounter.innerText = count.toString()));
@@ -72,5 +76,20 @@ function listenCheckAll() {
     }
   };
 
-  fromEvent($checkAllInput, 'change').subscribe(changeListener);
+  return fromEvent($checkAllInput, 'change').subscribe(changeListener);
+}
+
+function listenQuestion() {
+  const showModal = () => {
+    $answer.classList.add('modal-show');
+  };
+
+  const hideModal = () => {
+    $answer.classList.remove('modal-show');
+  };
+
+  return [
+    fromEvent($question, 'click').subscribe(showModal),
+    fromEvent($closeAnswer, 'click').subscribe(hideModal),
+  ];
 }

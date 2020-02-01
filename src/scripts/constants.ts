@@ -24,6 +24,12 @@ export const $strategies = Array.from(
   >) || [],
 );
 
+export const $question = document.querySelector('#question') as SVGElement;
+export const $answer = document.querySelector('#answer') as HTMLDivElement;
+export const $closeAnswer = document.querySelector(
+  '#answer-close',
+) as HTMLDivElement;
+
 export enum Strategies {
   MergeMap,
   SwitchMap,
