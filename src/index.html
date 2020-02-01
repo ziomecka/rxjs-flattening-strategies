@@ -15,16 +15,28 @@
     <h1>RxJS flattening strategies</h1>
     <main>
       <sidebar>
-        <h2>strategies <input type="checkbox" id="check-all"/></h2>
+        <h2>strategies</h2>
         <fieldset>
-          <input type="checkbox" value="0" id="strategy-0"/>
-          <label for="strategy-0">mergeMap</label>
-          <input type="checkbox" value="1" id="strategy-1"/>
-          <label for="strategy-1">switchMap</label>
-          <input type="checkbox" value="2" id="strategy-2"/>
-          <label for="strategy-2">concatMap</label>
-          <input type="checkbox" value="3" id="strategy-3"/>
-          <label for="strategy-3">exhaustMap</label>
+          <div>
+            <input type="checkbox" id="check-all"/>
+            <label for="check all">all strategies</label>
+          </div>
+          <div>
+            <input type="checkbox" value="0" id="strategy-0"/>
+            <label for="strategy-0">mergeMap</label>
+          </div>
+          <div>
+            <input type="checkbox" value="1" id="strategy-1"/>
+            <label for="strategy-1">switchMap</label>
+          </div>
+          <div>
+            <input type="checkbox" value="2" id="strategy-2"/>
+            <label for="strategy-2">concatMap</label>
+          </div>
+          <div>
+            <input type="checkbox" value="3" id="strategy-3"/>
+            <label for="strategy-3">exhaustMap</label>
+          </div>
         </fieldset>
         <fieldset>
           <button id="emit-button">xhr: <span id="emit-count">0</span></button>
