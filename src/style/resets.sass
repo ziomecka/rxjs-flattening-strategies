@@ -1,4 +1,4 @@
-body, main, sidebar, div, p, fieldset, h1, h2, input
+body, main, sidebar, div, p, fieldset, h1, h2, input, button
   margin: 0
   padding: 0
   box-sizing: border-box
@@ -45,26 +45,6 @@ sidebar
 
 sidebar div
   align-items: center
-
-button
-  box-sizing: border-box
-  margin: $small-distance
-  padding: $medium-distance
-  width: $medium-button-width
-  font-family: Arial
-  font-size: $font-size
-  background-color: rgba(0,0,0,0)
-  box-shadow: none
-  outline: none
-  border: $border-width solid $solid-color
-  border-radius: $border-width
-  &:nth-of-type(1)
-    margin-left: 0
-  &:hover
-    background-color: rgba(0,0,0,.3)
-  &:active
-    background-color: rgba(0,0,0,1)
-    color: $background-color
 
 footer
   font-size: $footer-font-size
