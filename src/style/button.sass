@@ -14,3 +14,31 @@ button
   &:active
     background-color: rgba(0,0,0,1)
     color: $background-color
+
+$button-icon-height: 24px
+$button-icon-border-width: 2px
+
+.button-icon
+  height: $button-icon-height
+  width: $button-icon-height
+  border: .1px $background-color solid
+  border-radius: 50%
+  margin: 0
+  padding: 0
+  &:after
+    display: inline-block
+    width: 100%
+    height: 100%
+    box-sizing: border-box
+    border: $button-icon-border-width $border-color solid
+    border-radius: 50%
+    font-weight: $bold-font-weight
+    line-height: $button-icon-height
+    font-size: 1rem
+    text-align: center
+    text-transform: uppercase
+
+h1 .button-icon
+  margin-left: $medium-distance
+  &:after
+    content: '?'
