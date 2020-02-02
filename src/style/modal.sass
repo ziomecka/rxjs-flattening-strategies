@@ -7,18 +7,16 @@ $modal-box-max-width: 700px
 
 .modal
   position: fixed
-  top: -$modal-height
   left: 0
   height: $modal-height
   width: $modal-width
   background-color: transparent
   border: none
   transform: translateY(-50%)
-  &-show
-    top: 50%
+  backdrop-filter: blur(1px)
   &-box
     position: fixed
-    top: 50%
+    top: -100%
     left: 50%
     height: $modal-box-height
     width: $modal-box-width
@@ -27,7 +25,20 @@ $modal-box-max-width: 700px
     background-color: $background-color
     border: $border-width $border-color solid
     transform: translate(-50%, -50%)
+    transition: top #{$transition-time}s ease
+    box-shadow: 5px 5px 2px rgba(0, 0, 0, .05)
     .button-modal-close
       float: right
       &:after
         content: 'x'
+  &-show
+
+.modal
+  transition: top 0s ease #{$transition-time / 2}s
+  top: -$modal-height
+
+.modal.modal-show
+  transition: top 0s ease 0s
+  top: 50%
+  .modal-box
+    top: 50%
