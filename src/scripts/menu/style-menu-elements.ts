@@ -6,7 +6,7 @@ const LOWER_OPACITY = '.2';
 
 export const styleMenuElements = () => {
   const anyStrategyChecked = someStrategyStatus(true);
-  const anyStrategyNotChecked = someStrategyStatus(!false);
+  const anyStrategyNotChecked = someStrategyStatus(false);
 
   if (anyStrategyNotChecked && anyStrategyChecked) {
     changeCheckAllOpacity(LOWER_OPACITY);
