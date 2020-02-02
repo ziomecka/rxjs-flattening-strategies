@@ -9,6 +9,7 @@ fieldset
   border-bottom: $border-width solid $solid-color
 
 body
+  position: relative
   min-height: 100vh
   font-family: Arial
   font-size: $font-size
@@ -49,9 +50,11 @@ sidebar div
   align-items: center
 
 footer
+  display: flex
+  align-items: center
+  position: absolute
+  bottom: 0
   font-size: $footer-font-size
-  position: fixed
-  bottom: $x-small-distance
 
 li
   margin: $large-distance 0

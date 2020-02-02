@@ -12,7 +12,15 @@ h1
   display: flex
   align-items: center
 
+body
+  padding-bottom: $footer-height
+
 footer
+  height: $footer-height
+  width: calc(100% - 2 * #{$medium-distance})
+  left: $medium-distance
+  background: $footer-background
+  border-top: $border-width $border-color solid
   img
     height: $line-height
   img, address a
