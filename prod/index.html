@@ -92,7 +92,41 @@
           class="button-icon button-modal-close"
           title="close"
         ></button>
-        <h3>Description</h3>
+        <h3>Tool description</h3>
+        <p>
+          The tool visualizes how the <b>mergeMap</b>, <b>switchMap</b>,
+          <b>concatMap</b> and <b>exhaustMap</b> operators work.
+        </p>
+        <ul>
+          <li>The user can select any combination of the operators.</li>
+          <li>
+            Tool can either be in <i>on</i> or <i>off</i> state (controlled by
+            <i>xhr</i> and <i>reset</i> buttons).
+          </li>
+          <li>
+            Xhr event consists of three <i>steps</i> and
+            <i>complete</i> message, separated by one second intervals (<b
+              >xhr-steps stream</b
+            >).
+          </li>
+          <li>
+            Tool counts times the <i>xhr</i> button has been clicked (<b
+              >xhr-counter stream</b
+            >).
+          </li>
+          <li>
+            The flattening strategies, which have been checked, react to the
+            xhr-counter stream and return combined xhr-counter stream and
+            xhr-steps stream (<b>strategy stream</b>).
+          </li>
+          <li>
+            <b>Strategy streams</b> are subscribed by functions responsible for
+            rendering the logs on the screen.
+          </li>
+        </ul>
+        <h4>
+          Enjoy learning the flattening strategies!
+        </h4>
       </div>
     </div>
   <script type="text/javascript" src="bundle.js"></script></body>
