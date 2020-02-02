@@ -4,11 +4,13 @@ $foldable-height: 100px
 .foldable
   position: relative
   padding: 0
-  div:first-of-type
+  > div:first-of-type
     transition: height $transition-time ease
     overflow: hidden
     height: $foldable-height
     padding: 0
+    div
+      display: inline-block
   button
     position: absolute
     display: flex
@@ -33,5 +35,5 @@ $foldable-height: 100px
       line-height: $font-size
   &-folded
     border-bottom: none
-    div:first-of-type
+    > div:first-of-type
       height: 0
