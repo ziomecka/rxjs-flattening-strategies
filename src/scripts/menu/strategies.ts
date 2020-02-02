@@ -1,6 +1,7 @@
-import { $checkAllInput, $checkAllLabel, $strategies } from './constants';
+import { $checkAllInput, $strategies } from './constants';
 import { appendStrategy, removeStrategy } from '../strategies/';
 import { fromEvent } from 'rxjs';
+import { styleMenuElements } from './style-menu-elements';
 
 export const listenStrategiesCheckBoxes = () => {
   const changeListener = ({
@@ -23,21 +24,8 @@ export const listenStrategiesCheckBoxes = () => {
 export const toggleCheckAll = (status: boolean) => {
   $checkAllInput.checked = status;
 
-  if (someStrategyStatus(!status) && someStrategyStatus(status)) {
-    $checkAllInput.style.opacity = '.2';
-    $checkAllLabel.style.opacity = '.2';
-    $checkAllInput.checked = true;
-  } else {
-    $checkAllInput.style.opacity = '1';
-    $checkAllLabel.style.opacity = '1';
-  }
+  styleMenuElements();
 };
-
-function someStrategyStatus(expectedStatus = true) {
-  return $strategies.some($inputElement => {
-    return $inputElement.checked === expectedStatus;
-  });
-}
 
 export const listenCheckAll = () => {
   const changeListener = ({

@@ -5,3 +5,4 @@ export {
 } from './strategies';
 
 export { listenQuestion } from './help';
+export { styleMenuElements } from './style-menu-elements';
