@@ -1,0 +1,37 @@
+
+$foldable-height: 100px
+
+.foldable
+  position: relative
+  padding: 0
+  div:first-of-type
+    transition: height $transition-time ease
+    overflow: hidden
+    height: $foldable-height
+    padding: 0
+  button
+    position: absolute
+    display: flex
+    align-items: center
+    top: 0
+    left: $medium-distance
+    width: $font-size
+    height: $font-size
+    padding: 0
+    border: none
+    background: $background-color
+    font-weight: $bold-font-weight
+    font-size: $font-size
+    transform: translateY(-50%)
+    &:after
+      content: "+"
+      display: inline-block
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      line-height: $font-size
+  &-folded
+    border-bottom: none
+    div:first-of-type
+      height: 0

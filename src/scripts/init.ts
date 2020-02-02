@@ -1,5 +1,6 @@
 import {
   listenCheckAll,
+  listenFolding,
   listenQuestion,
   listenStrategiesCheckBoxes,
   styleMenuElements,
@@ -13,6 +14,7 @@ export const init = () => {
   listenStrategiesCheckBoxes();
   listenCheckAll();
   listenQuestion();
+  listenFolding();
 
   styleMenuElements();
 
