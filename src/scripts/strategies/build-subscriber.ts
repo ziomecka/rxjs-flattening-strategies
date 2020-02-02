@@ -1,14 +1,19 @@
+import { $colorsAlpha } from './constants';
 import { Strategies } from '../constants';
 import { buildLoggerId } from '../helpers';
 
 const notExists = (value: any) => value === undefined || value === null;
+const getColorsAlpha = () => $colorsAlpha.value;
+
+const DEFAULT_COLOR = 'inherit';
+const CONTRAST_COLOR = 'white';
 
 export const colors = new Map([
-  [1, 'rgba(255, 0, 0, .09'],
-  [2, 'rgba(0, 255, 0, .09'],
-  [3, 'rgba(255, 255, 0, .09'],
-  [4, 'rgba(0, 0, 255, .09'],
-  [5, 'rgba(255, 0, 255, .09'],
+  [1, { background: '255, 0, 0', color: CONTRAST_COLOR }],
+  [2, { background: '0, 255, 0', color: DEFAULT_COLOR }],
+  [3, { background: '255, 255, 0', color: DEFAULT_COLOR }],
+  [4, { background: '0, 0, 255', color: CONTRAST_COLOR }],
+  [5, { background: '255, 0, 255', color: DEFAULT_COLOR }],
 ]);
 
 export const buildSubscriber = (strategy: Strategies) => {
@@ -24,8 +29,14 @@ export const buildSubscriber = (strategy: Strategies) => {
     $p.innerText = typeof text === 'number' ? `step ${text}` : text;
     $p.setAttribute('data-xhr-counter', String(saveCounter));
     $p.classList.add('log');
+
+    const { background, color } = colors.get(saveCounter) || {};
+    const opacity = getColorsAlpha();
+
     $p.style.background =
-      colors.get(saveCounter) || `rgba(100, 100, 100, .${saveCounter}`;
+      `rgba(${background}, ${opacity})` ||
+      `rgba(100, 100, 100, .${saveCounter}`;
+    $p.style.color = color || DEFAULT_COLOR;
 
     $parent.appendChild($p);
   };
