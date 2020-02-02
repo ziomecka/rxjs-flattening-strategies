@@ -1,4 +1,5 @@
 import { $checkAllInput, $checkAllLabel, $strategies } from './constants';
+import { $emitButton } from '../constants';
 
 const FULL_OPACITY = '1';
 const LOWER_OPACITY = '.2';
@@ -9,11 +10,17 @@ export const styleMenuElements = () => {
 
   if (anyStrategyNotChecked && anyStrategyChecked) {
     changeCheckAllOpacity(LOWER_OPACITY);
+
     $checkAllInput.checked = true;
+    $emitButton.disabled = false;
   } else if (anyStrategyChecked) {
     changeCheckAllOpacity(FULL_OPACITY);
+
+    $emitButton.disabled = false;
   } else {
     changeCheckAllOpacity(FULL_OPACITY);
+
+    $emitButton.disabled = true;
   }
 };
 
