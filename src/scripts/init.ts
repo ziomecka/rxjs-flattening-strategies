@@ -2,6 +2,7 @@ import {
   listenCheckAll,
   listenQuestion,
   listenStrategiesCheckBoxes,
+  styleMenuElements,
 } from './menu';
 import { $saveCounter } from './constants';
 import { applicationState$ } from './application-state';
@@ -12,6 +13,8 @@ export const init = () => {
   listenStrategiesCheckBoxes();
   listenCheckAll();
   listenQuestion();
+
+  styleMenuElements();
 
   return [
     applicationState$.subscribe(reactToAppState),
